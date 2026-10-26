@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learnify is an e-learning platform with practical courses, expert instructors and progress tracking.">
+  <title>Learnify | E-Learning Platform</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body data-page="home">
+
+  <div class="topbar">
+    <div class="container">
+      <span>🎓 Learn from anywhere, anytime</span>
+      <span>Support: support@learnify.com</span>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">L</span>
+        Learnify
+      </a>
+      <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
+        <a class="active" aria-current="page" href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="instructors.html">Instructors</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a class="nav-mobile-only" href="login.html">Login</a>
+      </nav>
+      <div class="nav-actions">
+        <span class="nav-auth" id="nav-auth">
+          <a class="btn btn-outline" href="login.html">Login</a>
+          <a class="btn btn-primary" href="signup.html">Get Started</a>
+        </span>
+        <button class="nav-toggle-label" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">🚀 Learn smarter. Grow faster.</span>
+          <h1>Build your future with <span class="gradient-text">better learning.</span></h1>
+          <p>Explore practical courses taught by experienced instructors and develop skills that matter for your career.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="courses.html">Explore Courses →</a>
+            <a class="btn btn-outline" href="about.html">Why Learnify?</a>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-hidden="true">
+          <div class="mock-window">
+            <div class="mock-head">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <div class="mock-body">
+              <div class="mock-banner"></div>
+              <div class="mock-lines">
+                <div class="line"></div>
+                <div class="line short"></div>
+                <div class="line"></div>
+              </div>
+              <div class="mock-progress-row">
+                <span>Course Progress</span>
+                <span>78%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width:78%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="stats">
+        <div class="stat">
+          <strong>50K+</strong>
+          <span>Students</span>
+        </div>
+        <div class="stat">
+          <strong>500+</strong>
+          <span>Courses</span>
+        </div>
+        <div class="stat">
+          <strong>120+</strong>
+          <span>Instructors</span>
+        </div>
+        <div class="stat">
+          <strong>4.8/5</strong>
+          <span>Average Rating</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="popular-courses">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Popular courses</h2>
+            <p>Learn in-demand skills with structured, beginner-friendly courses.</p>
+          </div>
+          <a class="btn btn-outline" href="courses.html">View all courses</a>
+        </div>
+
+        <div class="grid-3">
+
+          <a class="card" href="course-details.html?id=python">
+            <div class="course-img bg-python" aria-hidden="true">PY</div>
+            <div class="card-body">
+              <h3>Python Programming</h3>
+              <div class="course-meta">
+                <span>12.5K students</span>
+                <span class="rating">★ 4.9</span>
+              </div>
+              <p>Master Python from fundamentals to object-oriented programming.</p>
+              <div class="price-row">
+                <span class="price">₹999</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="card" href="course-details.html?id=html-css">
+            <div class="course-img bg-web" aria-hidden="true">WEB</div>
+            <div class="card-body">
+              <h3>HTML &amp; CSS Mastery</h3>
+              <div class="course-meta">
+                <span>9.2K students</span>
+                <span class="rating">★ 4.9</span>
+              </div>
+              <p>Build responsive websites using HTML, CSS and modern design principles.</p>
+              <div class="price-row">
+                <span class="price">₹799</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="card" href="course-details.html?id=intro-ai">
+            <div class="course-img bg-ai" aria-hidden="true">AI</div>
+            <div class="card-body">
+              <h3>Introduction to AI</h3>
+              <div class="course-meta">
+                <span>8.7K students</span>
+                <span class="rating">★ 4.9</span>
+              </div>
+              <p>Understand artificial intelligence, machine learning and real-world applications.</p>
+              <div class="price-row">
+                <span class="price">₹1,299</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head center">
+          <div>
+            <h2>Why students choose us</h2>
+            <p>Everything you need to make consistent progress.</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card feature">
+            <div class="feature-icon" aria-hidden="true">🎯</div>
+            <h3>Practical Learning</h3>
+            <p>Focus on useful concepts, projects and skills instead of memorizing theory.</p>
+          </div>
+          <div class="card feature">
+            <div class="feature-icon" aria-hidden="true">👨‍🏫</div>
+            <h3>Expert Instructors</h3>
+            <p>Learn from educators and industry professionals with practical experience.</p>
+          </div>
+          <div class="card feature">
+            <div class="feature-icon" aria-hidden="true">📈</div>
+            <h3>Track Progress</h3>
+            <p>Use your dashboard to monitor course progress and learning goals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Learnify</h3>
+        <p>A modern learning platform designed to help students build skills for the future.</p>
+        <p class="footer-contact">✉ support@learnify.com<br>☎ +91 98765 43210<br>⌖ Chandigarh, India</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <div class="footer-links">
+          <a href="courses.html">Courses</a>
+          <a href="instructors.html">Instructors</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <div class="footer-links">
+          <a href="login.html">Login</a>
+          <a href="signup.html">Register</a>
+          <a href="dashboard.html">Dashboard</a>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright">© 2026 Learnify. University project — a demo website with no real accounts, payments or messages.</div>
+  </footer>
+
+</body>
+</html>

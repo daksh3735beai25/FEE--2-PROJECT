@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Log in to Learnify (demo login).">
+  <title>Login | Learnify</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body data-page="login">
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">L</span>
+        Learnify
+      </a>
+      <a class="btn btn-outline" href="index.html">← Home</a>
+    </div>
+  </header>
+
+  <main class="auth-wrap" id="main">
+    <div class="auth-card">
+
+      <form id="login-form" novalidate>
+        <h1>Welcome back 👋</h1>
+        <p>Login to continue your learning journey.</p>
+
+        <div class="alert alert-info demo-credentials">
+          <strong>Demo login only.</strong> There is no real authentication or server.<br>
+          Test email: <code>demo@learnify.com</code><br>
+          Test password: <code>Demo@1234</code>
+        </div>
+
+        <div id="login-result" role="alert" hidden></div>
+
+        <div class="form-group">
+          <label for="login-email">Email Address</label>
+          <input class="form-control" id="login-email" name="email" type="email" autocomplete="username" placeholder="you@example.com" aria-describedby="login-email-error">
+          <small class="field-error" id="login-email-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <div class="pw-wrap">
+            <input class="form-control" id="login-password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" aria-describedby="login-password-error">
+            <button class="pw-toggle" type="button" data-target="login-password" aria-pressed="false" aria-label="Show password">Show</button>
+          </div>
+          <small class="field-error" id="login-password-error"></small>
+        </div>
+
+        <div class="form-group captcha">
+          <label for="captcha-answer">CAPTCHA: solve the sum</label>
+          <div class="captcha-row">
+            <span class="captcha-question" id="captcha-question" aria-live="polite">…</span>
+            <input class="form-control" id="captcha-answer" name="captcha" inputmode="numeric" autocomplete="off" placeholder="Answer" aria-describedby="captcha-answer-error captcha-note">
+            <button class="btn btn-outline btn-sm" type="button" id="captcha-refresh" aria-label="Get a new CAPTCHA challenge">↻ New</button>
+          </div>
+          <small class="field-error" id="captcha-answer-error"></small>
+          <small class="hint" id="captcha-note">Demo CAPTCHA only. It is checked in your browser and is not secure like a production CAPTCHA.</small>
+        </div>
+
+        <div class="check-row">
+          <label class="check">
+            <input type="checkbox" id="remember-me">
+            Remember my email
+          </label>
+          <button class="link-btn" type="button" id="forgot-link">Forgot password?</button>
+        </div>
+
+        <button class="btn btn-primary full" id="login-submit" type="submit">Login</button>
+
+        <div class="auth-note">Don't have an account? <a href="signup.html">Create one</a></div>
+      </form>
+
+      <section id="forgot-panel" hidden aria-labelledby="forgot-title">
+        <form id="forgot-form" novalidate>
+          <h1 id="forgot-title">Forgot password?</h1>
+          <p>Enter your email address and we will show you what a reset would look like.</p>
+          <div class="alert alert-info">Demo only: no email is actually sent.</div>
+          <div id="forgot-result" role="status" aria-live="polite" hidden></div>
+          <div class="form-group">
+            <label for="forgot-email">Email Address</label>
+            <input class="form-control" id="forgot-email" type="email" autocomplete="email" placeholder="you@example.com" aria-describedby="forgot-email-error">
+            <small class="field-error" id="forgot-email-error"></small>
+          </div>
+          <button class="btn btn-primary full" id="forgot-submit" type="submit">Send reset link (demo)</button>
+          <div class="auth-note"><button class="link-btn" type="button" id="forgot-back">← Back to login</button></div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+</body>
+</html>

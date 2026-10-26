@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manage your Learnify student profile (demo).">
+  <title>Profile | Learnify</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body class="dashboard" data-page="profile">
+
+  <div class="dashboard-grid">
+
+    <aside class="sidebar">
+      <a class="side-logo" href="index.html">🎓 Learnify</a>
+      <nav class="side-links" aria-label="Dashboard navigation">
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="dashboard.html#my-courses">📚 My Courses</a>
+        <a href="instructors.html">👨‍🏫 Instructors</a>
+        <a class="active" aria-current="page" href="profile.html">👤 Profile</a>
+        <a href="index.html">🏠 Back to Home</a>
+        <button class="side-logout" type="button" data-action="logout">🚪 Logout</button>
+      </nav>
+      <div class="user-chip" id="user-chip" hidden>
+        <span class="user-name"></span>
+        <span class="user-email"></span>
+      </div>
+    </aside>
+
+    <main class="dash-main" id="main">
+
+      <div class="card detail-card gate" id="auth-gate" hidden>
+        <h1>Please log in</h1>
+        <p>This page shows your demo student area, so you need to log in first.</p>
+        <div class="gate-actions">
+          <a class="btn btn-primary" href="login.html">Go to Login</a>
+          <a class="btn btn-outline" href="index.html">Back to Home</a>
+        </div>
+      </div>
+
+      <div id="page-content" hidden>
+
+        <div class="dash-head">
+          <div>
+            <h1>My Profile</h1>
+            <p>Manage your student information.</p>
+          </div>
+          <a class="btn btn-outline" href="dashboard.html">← Dashboard</a>
+        </div>
+
+        <form class="card detail-card profile-card" id="profile-form" novalidate>
+          <div class="large-avatar mt-lg" role="img" aria-label="Profile avatar">👤</div>
+          <div class="alert alert-info mt-lg">Demo profile: changes are saved only in this browser (localStorage), never on a server. Passwords are never stored.</div>
+          <div id="profile-result" role="status" aria-live="polite" hidden></div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="profile-first">First Name</label>
+              <input class="form-control" id="profile-first" autocomplete="given-name" aria-describedby="profile-first-error">
+              <small class="field-error" id="profile-first-error"></small>
+            </div>
+            <div class="form-group">
+              <label for="profile-last">Last Name</label>
+              <input class="form-control" id="profile-last" autocomplete="family-name" aria-describedby="profile-last-error">
+              <small class="field-error" id="profile-last-error"></small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="profile-email">Email</label>
+            <input class="form-control" id="profile-email" type="email" autocomplete="email" aria-describedby="profile-email-error">
+            <small class="field-error" id="profile-email-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="profile-goal">Learning Goal</label>
+            <select class="form-control" id="profile-goal">
+              <option>Become a Software Developer</option>
+              <option>Learn AI/ML</option>
+              <option>Become a Data Analyst</option>
+            </select>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Save Changes</button>
+        </form>
+
+      </div>
+    </main>
+
+  </div>
+
+</body>
+</html>

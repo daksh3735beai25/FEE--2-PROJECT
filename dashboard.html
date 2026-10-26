@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your Learnify student dashboard (demo data).">
+  <title>Student Dashboard | Learnify</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body class="dashboard" data-page="dashboard">
+
+  <div class="dashboard-grid">
+
+    <aside class="sidebar">
+      <a class="side-logo" href="index.html">🎓 Learnify</a>
+      <nav class="side-links" aria-label="Dashboard navigation">
+        <a class="active" aria-current="page" href="dashboard.html">📊 Dashboard</a>
+        <a href="dashboard.html#my-courses">📚 My Courses</a>
+        <a href="instructors.html">👨‍🏫 Instructors</a>
+        <a href="profile.html">👤 Profile</a>
+        <a href="index.html">🏠 Back to Home</a>
+        <button class="side-logout" type="button" data-action="logout">🚪 Logout</button>
+      </nav>
+      <div class="user-chip" id="user-chip" hidden>
+        <span class="user-name"></span>
+        <span class="user-email"></span>
+      </div>
+    </aside>
+
+    <main class="dash-main" id="main">
+
+      <div class="card detail-card gate" id="auth-gate" hidden>
+        <h1>Please log in</h1>
+        <p>This page shows your demo student area, so you need to log in first.</p>
+        <div class="gate-actions">
+          <a class="btn btn-primary" href="login.html">Go to Login</a>
+          <a class="btn btn-outline" href="index.html">Back to Home</a>
+        </div>
+      </div>
+
+      <div id="page-content" hidden>
+
+        <div class="dash-head">
+          <div>
+            <h1 id="welcome">Welcome back! 👋</h1>
+            <p>Keep learning and reach your next goal.</p>
+          </div>
+          <a class="btn btn-primary" href="courses.html">Browse Courses</a>
+        </div>
+
+        <div class="alert alert-info">Demo data: courses and progress are stored only in this browser (localStorage). Nothing is saved to a server.</div>
+        <div id="dash-alert" role="status" aria-live="polite" hidden></div>
+
+        <div class="mini-stats">
+          <div class="mini-stat">
+            <span>Enrolled Courses</span>
+            <strong id="stat-enrolled">00</strong>
+          </div>
+          <div class="mini-stat">
+            <span>Overall Progress</span>
+            <strong id="stat-progress">0%</strong>
+          </div>
+          <div class="mini-stat">
+            <span>Learning Hours</span>
+            <strong id="stat-hours">0.0h</strong>
+          </div>
+        </div>
+
+        <div class="card detail-card" id="my-courses">
+          <div class="card-head">
+            <h2>My Course Progress</h2>
+            <button class="btn btn-outline btn-sm" type="button" id="reset-demo">Reset demo data</button>
+          </div>
+          <div class="course-progress" id="progress-list" aria-live="polite"></div>
+        </div>
+
+        <div class="table-card">
+          <div class="table-scroll">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Recent Activity</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody id="activity-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+</body>
+</html>
